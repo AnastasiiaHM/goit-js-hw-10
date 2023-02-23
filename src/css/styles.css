@@ -18,3 +18,11 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+.card {
+  list-style: none;
+  border: 1px solid #212121;
+  max-width: 340px;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+}

@@ -13,7 +13,7 @@ export const contriesMarkup = (data, element, container) => {
   const markupCard = data
     .map(
       el => `
-       <ul>
+       <ul class="card">
          <li><img src="${el.flags.svg}" height="40px" width="40px"/>
             <h1>${el.name.official}</h1></li>
            <li><h2>Capital:${el.capital}</h2></li> 
@@ -29,7 +29,7 @@ export const contriesMarkup = (data, element, container) => {
       'Too many matches found. Please enter a more specific name.'
     );
   }
-  if (data.length > 2 && data.length < 10) {
+  if (data.length >= 2 && data.length <= 10) {
     element.insertAdjacentHTML('beforeend', markup);
   } else {
     container.insertAdjacentHTML('beforeend', markupCard);
